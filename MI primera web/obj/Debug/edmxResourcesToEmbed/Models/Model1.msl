@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SoftfastModelStoreContainer" CdmEntityContainer="SoftfastEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="SoftfastModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provedores">
+      <EntityTypeMapping TypeName="SoftfastModel.Provedores">
+        <MappingFragment StoreEntitySet="Provedores">
+          <ScalarProperty Name="Precio_Porvedores" ColumnName="Precio_Porvedores" />
+          <ScalarProperty Name="Nombre_Porvedores" ColumnName="Nombre_Porvedores" />
+          <ScalarProperty Name="Id_Provedor" ColumnName="Id_Provedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MI_primera_web.Models.Provedores>
+
+@{
+    ViewBag.Title = "provedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>provedor</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Porvedores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio_Porvedores)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Porvedores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio_Porvedores)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Provedor }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Provedor }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Provedor })
+        </td>
+    </tr>
+}
+
+</table>

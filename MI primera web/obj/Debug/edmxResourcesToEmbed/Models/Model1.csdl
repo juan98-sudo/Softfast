@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SoftfastModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="Id_Cliente" />
+    </Key>
+    <Property Name="Id_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SoftfastEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Provedores" EntityType="SoftfastModel.Provedores" />
+  </EntityContainer>
+  <EntityType Name="Provedores">
+    <Key>
+      <PropertyRef Name="Id_Provedor" />
+    </Key>
+    <Property Name="Id_Provedor" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Porvedores" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Precio_Porvedores" Type="Decimal" Precision="4" Scale="2" />
+  </EntityType>
+</Schema>
